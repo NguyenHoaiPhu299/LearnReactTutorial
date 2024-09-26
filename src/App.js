@@ -3,26 +3,20 @@ import './App.css';
 import Header from './Header';
 
 function App() {
-  return (
-    <div>
-      <Header />
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+  function Member() {
+    return (
+      <div className='member'>
+        <h2>Nguyễn Hoài Phú</h2>
+        <p>Tuổi: 20</p>
       </div>
-    </div>
+    );
+  }
+  
+  return (
+    <>
+      <Member />
+      <Member></Member>
+    </>
   );
 }
 
