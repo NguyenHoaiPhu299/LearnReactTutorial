@@ -9,7 +9,9 @@ function App() {
   const info = {
     name: 'Hoài Phú',
     age: 20,
-    shippingAddress: 'Hồ Chí Minh'
+    shippingAddress: 'Hồ Chí Minh',
+    posts: [
+    ]
   };
 
   const comment = {
@@ -25,7 +27,23 @@ function App() {
       comments: {
         title: 'comment user Phu',
         content: 'content comment user Phu'
-      }
+      },
+      posts: [
+        {
+          title: 'Post Phu 01',
+          content: 'Content Phu 01'
+        },
+
+        {
+          title: 'Post Phu 02',
+          content: 'Content Phu 02'
+        },
+
+        {
+          title: 'Post Phu 03',
+          content: 'Content Phu 03'
+        }
+      ]
     },
 
     {
@@ -35,7 +53,23 @@ function App() {
       comments: {
         title: 'comment user A',
         content: 'content comment user A'
-      }
+      },
+      posts: [
+        {
+          title: 'Post A 01',
+          content: 'Content A 01'
+        },
+
+        {
+          title: 'Post A 02',
+          content: 'Content A 02'
+        },
+
+        {
+          title: 'Post A 03',
+          content: 'Content A 03'
+        }
+      ]
     },
 
     {
@@ -45,7 +79,23 @@ function App() {
       comments: {
         title: 'comment user B',
         content: 'content comment user B'
-      }
+      },
+      posts: [
+        {
+          title: 'Post B 01',
+          content: 'Content B 01'
+        },
+
+        {
+          title: 'Post B 02',
+          content: 'Content B 02'
+        },
+
+        {
+          title: 'Post B 03',
+          content: 'Content B 03'
+        }
+      ]
     }
   ];
 
@@ -57,6 +107,9 @@ function App() {
         age={item.age}
         shippingAddress={item.shippingAddress}
         comment={<Comment title={item.comments.title} content={item.comments.content}></Comment>}
+        posts = {
+          item.posts
+        }
       ></Member>
     );
   });
@@ -68,9 +121,13 @@ function App() {
         age={info.age}
         shippingAddress={info.shippingAddress}
         comment={<Comment content={comment.content} title={comment.title}></Comment>}
+        posts = {
+          info.posts
+        }
       ></Member>
       <hr></hr>
       {memberList}
+      <hr></hr>
     </>
   );
 }
