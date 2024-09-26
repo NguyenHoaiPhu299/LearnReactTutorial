@@ -16,7 +16,20 @@ function Member1(props) {
     );
 }
 
-function Member(props) {
+function Member2(props) {
+    const {name, age, shippingAddress, comment, posts} = props;
+    return (
+        <div className='member-box'>
+            <h2>Tên: {name}</h2>
+            <p>Tuổi: {age}</p>
+            <p>Địa chỉ giao hàng: {shippingAddress}</p>
+            Comment: {comment}
+            <Posts {...props}/>
+        </div>
+    );
+}
+
+const Member = props => {
     const {name, age, shippingAddress, comment, posts} = props;
     return (
         <div className='member-box'>
