@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './Header';
-import Member from './components/Member';
+import {Member} from './components/Member';
 import Comment from './components/Comment';
 
 function App() {

@@ -29,7 +29,7 @@ function Member2(props) {
     );
 }
 
-const Member = props => {
+export const Member = props => {
     const {name, age, shippingAddress, comment, posts} = props;
     return (
         <div className='member-box'>
@@ -41,5 +41,3 @@ const Member = props => {
         </div>
     );
 }
-
-export default Member;
