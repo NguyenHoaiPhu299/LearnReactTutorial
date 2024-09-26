@@ -2,12 +2,12 @@ import Avatar from "./Avartar";
 import Comment from "./Comment";
 import MemberInfo from "./MemberInfo";
 
-function Member() {
+function Member(props) {
     return (
         <div className='member-box'>
-            <Avatar></Avatar>
-            <MemberInfo></MemberInfo>
-            <Comment></Comment>
+            <h2>Tên: {props.name}</h2>
+            <p>Tuổi: {props.age}</p>
+            <p>Địa chỉ giao hàng: {props.shippingAddress}</p>
         </div>
     );
 }

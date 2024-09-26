@@ -6,7 +6,7 @@ import Member from './components/Member';
 function App() {
   return (
     <>
-      <Member></Member>
+      <Member name='Hoai Phu' age='20' shippingAddress='Ho Chi Minh'></Member>
     </>
   );
 }
