@@ -1,7 +1,7 @@
 function Comment(props){
     return(
         <div className="comment">
-            {props.content}
+            <p>{props.title}: {props.content}</p>
         </div>
     )
 };

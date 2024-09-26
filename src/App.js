@@ -7,10 +7,12 @@ import Comment from './components/Comment';
 function App() {
   return (
     <>
-      <Member name='Hoai Phu' age='20' shippingAddress='Ho Chi Minh'></Member>
-      <Member name='Nguyen Van A' age='21' shippingAddress='Ha Noi'/>
-      <Comment content='Comment 1'/>
-      <Comment content='Comment 2'/>
+      <Member 
+        name='Hoai Phu' 
+        age='20' 
+        shippingAddress='Ho Chi Minh'
+        comment={<Comment content='Comment 01' title='Subject 01'></Comment>}
+      ></Member>
     </>
   );
 }
