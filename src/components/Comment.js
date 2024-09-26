@@ -1,9 +1,15 @@
-function Comment(props){
-    return(
-        <div className="comment">
-            {props.title}: {props.content}
-        </div>
-    )
-};
+import React from "react";
 
-export default Comment;
+export default class Comment extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return(
+            <div className="comment">
+                {this.props.title}: {this.props.content}
+            </div>
+        )
+    }
+}
