@@ -4,19 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-function Member() {
-  return (
-    <div className='member'>
-      <h2>Nguyễn Hoài Phú</h2>
-      <p>Tuổi: 20</p>
-    </div>
-  );
-}
-
 const root = ReactDOM.createRoot(document.querySelector('.root'));
 root.render(
   <React.StrictMode>
-    <Member />
+    <App />
   </React.StrictMode>
 );
 
