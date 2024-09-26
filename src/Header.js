@@ -1,62 +1,82 @@
 import React from "react";
 
-function Header() {
-    const firstProvince = 2;
+function getProduct(product) {
+    // Sử dụng if
+    if (product.status === 1) {
+        return (
+            <>
+                <p>ID: {product.id}</p>
+                <p>Name: {product.name}</p>
+                <p>Price: {product.price}</p>
+                <p>Description: {product.description}</p>
 
-    const styleElement = {
-        color: 'red',
-        fontWeight: 'bold',
-        fontSize: '1.5rem'
+                {/* Sử dụng toán tử 3 ngôi */}
+                <p>Status: {product.status == 1 ? 'Kích hoạt' : 'Chưa kích hoạt'}</p>
+                <p>
+                    Status: {
+                        product.status == 1 ?
+                        <span className='unactive'>Kích hoạt</span> :
+                        <span className='active'>Chưa kích hoạt</span>
+                    }
+                </p>
+            </>
+        );
     }
+}
 
-    const myAlert = () => {
-        alert('Unicode Academy');
-    };
+const product = {
+    id: 1,
+    name: 'Sản phẩm 1',
+    price: 12000,
+    description: 'Mô tả sản phẩm 1',
+    status: 1
+};
 
-    const myAlert1 = (name) => {
-        alert('Unicode Academy ' + name);
-    };
+const productList = [
+    {
+        id: 1,
+        name: 'Sản phẩm 1',
+        price: 12000
+    },
 
-    const welcomeContent = 'Khóa học lập trình tại unicode';
+    {
+        id: 2,
+        name: 'Sản phẩm 2',
+        price: 15000
+    },
 
+    {
+        id: 3,
+        name: 'Sản phẩm 3',
+        price: 17000
+    },
+
+    {
+        id: 4,
+        name: 'Sản phẩm 4',
+        price: 19000
+    }
+];
+
+// Sử dụng vòng lặp
+const list = productList.map((item, index) => {
+    return (
+        <div key={index}>
+            <p>ID: {item.id}</p>
+            <p>Name: {item.name}</p>
+            <p>Price: {item.price}</p>
+            <hr/>
+        </div>
+    )
+});
+
+function Header() {
     return (
         <>
-            {/* <h1 class='title'>UNICODE LEARNING</h1> */}
-            <h1 className='title'>UNICODE LEARNING</h1>
-            
-            {/* <label for='username'></label> */}
-            <label htmlFor='username'>user: </label>
-
-            {/* <input type='text' name='username' value='hoangan.web'></input> */}
-            <input type='text' id='username' name='username' defaultValue='hoangan.web'></input>
-
-            <div>
-                <select>
-                    <option value='0'>Chọn tỉnh thành</option>
-                    <option value={firstProvince}>Chọn tỉnh thành</option>
-                </select>
-            </div>
-
-            {/* <div className='element' style='color: red'>Khóa học React</div> */}
-            <div className='element' style={{color: 'red', fontWeight:'bold'}}>Khóa học React</div>
-            <div className='element' style={styleElement}>Khóa học React</div>
-            {/* Cặp ngoặc ngoài cùng dùng để truyền giá trị, cặp ngoặc bên trong là một object */}
-
-            {/* <button type='button' onclick='functionName()'>Nhấn vào đây</button> */}
-            <button type='button' onClick={myAlert}>Alert</button>
-            {/* <button type='button' onClick={myAlert1()}>Alert</button> */}
-
-            <p className='unicode'>{welcomeContent}</p>
-
-            <div>
-                {/* Hello world */}
-                <div className="awesome" style={{ border: "1px solid red" }}>
-                    <label htmlFor="name">Enter your name: </label>
-                    <input type="text" id="name" />
-                </div>
-                <p>Enter your HTML here</p>
-            </div>
-
+            {getProduct(product)}
+            <hr/>
+            <h2>Danh sách sản phẩm</h2>
+            {list}
         </>
     );
 }
