@@ -7,6 +7,7 @@ function App() {
   return (
     <>
       <Member name='Hoai Phu' age='20' shippingAddress='Ho Chi Minh'></Member>
+      <Member name='Nguyen Van A' age='21' shippingAddress='Ha Noi'/>
     </>
   );
 }
