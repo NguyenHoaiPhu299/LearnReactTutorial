@@ -1,8 +1,7 @@
-function Comment(){
+function Comment(props){
     return(
         <div className="comment">
-            Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit proin sit amet neque.
+            {props.content}
         </div>
     )
 };
