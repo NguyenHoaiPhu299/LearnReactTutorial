@@ -8,7 +8,7 @@ function Member(props) {
             <h2>Tên: {props.name}</h2>
             <p>Tuổi: {props.age}</p>
             <p>Địa chỉ giao hàng: {props.shippingAddress}</p>
-            <p>Comment: {props.comment}</p>
+            Comment: {props.comment}
         </div>
     );
 }
