@@ -5,17 +5,16 @@ export default class Comment extends Component {
         super(props);
     }
 
+    ShowContent = () => {
+        return <p>Demo Content</p>
+    }
+
     render() {
         const {title, content} = this.props;
 
-        const ShowContent = () => {
-            return <p>Demo Content</p>
-        }
-
         return(
             <div className="comment">
-                {ShowContent()}
-                <ShowContent />
+                {this.ShowContent()}
                 {title}: {content}
             </div>
         )
