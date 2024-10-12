@@ -1,18 +1,15 @@
 function Event01() {
 
-    const HandleChange = () => {
-        console.log('change');
-    }
-
-    const HandleChange1 = (e) => {
-        console.log(e.target);
-        console.log(e.target.innerText);
+    const HandleChange = (text) => {
+        console.log(text);
     }
     
     return (
         <>
             <h1>Unicode Academy</h1>
-            <button type="button" onClick={HandleChange1}>Changes</button>
+            <button type="button" onClick={HandleChange()}>Changes</button>
+            <button type="button" onClick={(e) => {console.log(e)}}>Changes</button>
+            <button type="button" onClick={(e) => {e.preventDefault(); HandleChange('Unicode')}}>Changes</button>
         </>
     );
 }
