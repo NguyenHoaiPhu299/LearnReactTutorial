@@ -2,16 +2,20 @@ import React from "react";
 
 class Event02 extends React.Component {
 
-    render() {
-        const handleChange = (text) => {
+    constructor() {
+        super();
+
+        this.handleChange = (text) => {
             console.log(text);
-        };
-        
+        }
+    }
+
+    render() {
         return (
             <>
                 <h1>Unicode Academy</h1>
                 <button type="buton" onClick={() => {
-                    handleChange('Unicode Academy');
+                    this.handleChange('Unicode Academy');
                 }}>Change</button>
             </>
         )
